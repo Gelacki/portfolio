@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="particulas"></div>
+
     <nav class="navegacao">
       <ul class="menu">
         <li>
@@ -50,53 +52,79 @@
       <div class="projetos-caixa">
         <div class="projetos-card">
           <img src="img/img1.png" alt="Projeto 1" class="projetos-imagem" />
-          <h3 class="info-projetos">Score Board Kumite</h3>
-          <p class="paragrafo-projetos">
-            Painel de Pontuação para Karatê Kumite (luta) regras 2025
-          </p>
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">Score Board Kumite</h3>
+            <p class="paragrafo-projetos">
+              Painel de Pontuação para Karatê Kumite (luta) regras 2025
+            </p>
+          </div>
         </div>
 
         <div class="projetos-card">
           <img src="img/img2.png" alt="Projeto 2" class="projetos-imagem" />
-          <h3 class="info-projetos">Projeto Cordel</h3>
-          <p class="paragrafo-projetos">
-            Projeto de uma Landing Page de Cordel (Poema) feito no curso modulo
-            2 de HTML5, CSS3 e JavaScript do Curso em Video.
-          </p>
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">Projeto Cordel</h3>
+            <p class="paragrafo-projetos">
+              Projeto de uma Landing Page de Cordel (Poema) feito no curso
+              modulo 2 de HTML5, CSS3 e JavaScript do Curso em Video.
+            </p>
+          </div>
         </div>
 
         <div class="projetos-card">
           <img src="img/img3.png" alt="Projeto 3" class="projetos-imagem" />
-          <h3 class="info-projetos">Projeto Android</h3>
-          <p class="paragrafo-projetos">
-            Projeto Android, contando a história do desenvolvimento e criação da
-            logo do Android,feito no curso modulo 1 de HTML5, CSS3 e JavaScript
-            do Curso em Video.
-          </p>
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">Projeto Android</h3>
+            <p class="paragrafo-projetos">
+              Projeto Android, contando a história do desenvolvimento e criação
+              da logo do Android,feito no curso modulo 1 de HTML5, CSS3 e
+              JavaScript do Curso em Video.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="contatos" class="contatos">
-      <h2 class="contatos-titulo">Contatos</h2>
-      <form class="formulario-contato" id="formulario">
+      <h2 class="contatos-titulo">Entre em Contatos</h2>
+
+      <form
+        class="formulario-contato"
+        id="formulario"
+        onsubmit="enviarWhats(event)"
+      >
         <div class="grupo-form">
-          <input
-            type="text"
-            name="nome"
-            placeholder="Nome"
-            class="campo-form"
-          />
+          <input type="text" name="nome" placeholder="Nome" class="campo-form" id="nome" required />
         </div>
+
         <div class="grupo-form">
           <textarea
             name="mensagem"
-            class="text-form"
+            class="campo-form"
             placeholder="Digite sua Mensagem"
             rows="6"
+            id="mensagem"
+            required
           ></textarea>
         </div>
+        <button type="submit" class="botao-form">Enviar WhatsApp</button>
       </form>
-    </section>
+    <script>
+      function enviarWhats(event) {
+        event.preventDefault();
+        const nome = document.getElementById("nome").value.trim();
+        const mensagem = document.getElementById("mensagem").value.trim();
+        const telefone = "5542998571023"; // Substitua pelo seu número de telefone com o código do país
+
+        const texto = `Olá! Me chamo ${nome || 'Contato'}. ${mensagem || ''}`;
+        const msgFormatada = encodeURIComponent(texto);
+
+        const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+        window.open(url, "_blank");
+      }
+    </script>
+      }
+    </script>
   </body>
 </html>
