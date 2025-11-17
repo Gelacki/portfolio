@@ -19,24 +19,24 @@
           <a href="#projetos" class="menu-link">Projetos</a>
         </li>
         <li>
-          <a href="#contato" class="menu-link">Contato</a>
+          <a href="#contatos" class="menu-link">Contato</a>
         </li>
       </ul>
     </nav>
 
     <main id="inicio" class="cabecalho">
-      <div>
-        <img src="img/perfil01.jpeg" alt="foto de perfil" class="foto-perfil" />
-        <h1>Aryell Gelacki</h1>
-        <p>Desenvolvedor Front End <br />(Full Stack em Treinamento)</p>
-      </div>
+      <img src="img/perfil01.png" alt="foto de perfil" class="foto-perfil" />
+      <h1>Aryell Gelacki</h1>
+      <p class="cabecalho-sub-titulo">
+        Desenvolvedor Front End <br />(Full Stack em Treinamento)
+      </p>
     </main>
 
     <section id="sobre" class="sobre">
       <h2 class="sobre-titulo">Sobre Mim</h2>
       <div class="sobre-caixa">
-        <p class="sobre-pararafo">
-          Olá! Meu nome é Aryell Gelacki, <br> 33 anos e sou um desenvolvedor
+        <p class="sobre-paragrafo">
+          Olá! Meu nome é Aryell Gelacki, tenho 33 anos e sou um desenvolvedor
           front end apaixonado por tecnologia e inovação. Atualmente, estou
           aprimorando minhas habilidades como desenvolvedor full stack. Estou
           sempre em busca de novos desafios e oportunidades para crescer na área
@@ -47,38 +47,56 @@
 
     <section id="projetos" class="projetos">
       <h2 class="projetos-titulo">Meus Projetos</h2>
-      <div class="projetos-caixa"></div>
-      <div class="projetos-card"></div>
-      <img src="img/img1.png" alt="Score Board cumite" class="projeto-imagem1" />
-      <h3 class="info-projetos">Score Board Cumite</h3>
-      <p>Painel de Pontuação para Karatê Kumite (luta) regras 2025</p>
+      <div class="projetos-caixa">
+        <div class="projetos-card">
+          <img src="img/img1.png" alt="Projeto 1" class="projetos-imagem" />
+          <h3 class="info-projetos">Score Board Kumite</h3>
+          <p class="paragrafo-projetos">
+            Painel de Pontuação para Karatê Kumite (luta) regras 2025
+          </p>
+        </div>
 
-      <section id="projetos" class="projetos">
-      <div class="projetos-caixa"></div>
-      <div class="projetos-card"></div>
-      <img src="img/img2.png" alt="Projeto Cordel" class="projeto-imagem2" />
-      <h3 class="info-projetos">Projeto Cordel</h3>
-      <p>Projeto de uma Landing Page de Cordel (Poema) <br>feito no curso modulo 2 de HTML5, CSS3 e JavaScript do Curso em Video.</p>
+        <div class="projetos-card">
+          <img src="img/img2.png" alt="Projeto 2" class="projetos-imagem" />
+          <h3 class="info-projetos">Projeto Cordel</h3>
+          <p class="paragrafo-projetos">
+            Projeto de uma Landing Page de Cordel (Poema) feito no curso modulo
+            2 de HTML5, CSS3 e JavaScript do Curso em Video.
+          </p>
+        </div>
 
-      <section id="projetos" class="projetos">
-      <div class="projetos-caixa"></div>
-      <div class="projetos-card"></div>
-      <img src="img/img3.png" alt="Projeto Android" class="projeto-imagem3" />
-      <h3 class="info-projetos">Projeto Android</h3>
-      <p>Projeto Android, contando a história do desenvolvimento e criação da logo do Android, <br>feito no curso modulo 1 de HTML5, CSS3 e JavaScript do Curso em Video.</p>
+        <div class="projetos-card">
+          <img src="img/img3.png" alt="Projeto 3" class="projetos-imagem" />
+          <h3 class="info-projetos">Projeto Android</h3>
+          <p class="paragrafo-projetos">
+            Projeto Android, contando a história do desenvolvimento e criação da
+            logo do Android,feito no curso modulo 1 de HTML5, CSS3 e JavaScript
+            do Curso em Video.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section id="contatos" class="contatos"> 
+    <section id="contatos" class="contatos">
       <h2 class="contatos-titulo">Contatos</h2>
       <form class="formulario-contato" id="formulario">
         <div class="grupo-form">
-          <input placeholder="Nome" class="campo-form">
+          <input
+            type="text"
+            name="nome"
+            placeholder="Nome"
+            class="campo-form"
+          />
         </div>
         <div class="grupo-form">
-          <textarea class="text-form" placeholder="Digite sua Mensagem"></textarea>
+          <textarea
+            name="mensagem"
+            class="text-form"
+            placeholder="Digite sua Mensagem"
+            rows="6"
+          ></textarea>
         </div>
       </form>
-
     </section>
   </body>
 </html>
