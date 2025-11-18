@@ -111,6 +111,17 @@ h1 {
   text-align: center;
 }
 
+.cabecalho-sub-titulo .cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.5rem; /* Ajuste a altura conforme o tamanho da fonte */
+  background-color: var(--cor-secundaria);
+  animation: piscar 0.7s infinite;
+  margin-left: 4px;
+  position: relative;
+  top: 4px;
+}
+
 .sobre {
   padding: 6rem 2rem;
 }
@@ -162,8 +173,8 @@ h1 {
 }
 
 .diferencial-paragrafo {
-  text-align: center;
-  font-size: 4.5rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 .diferencial-lista {
@@ -404,6 +415,17 @@ footer {
   }
 }
 
+@keyframes piscar {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -412,6 +434,10 @@ footer {
 
   .cabecalho-sub-titulo {
     font-size: 1.2rem;
+  }
+
+  .cabecalho-sub-titulo .cursor {
+    height: 1.2rem;
   }
 
   .menu {

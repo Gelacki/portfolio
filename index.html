@@ -32,7 +32,7 @@
     <main id="inicio" class="cabecalho">
       <img src="img/perfil01.png" alt="foto de perfil" class="foto-perfil" />
       <h1>Aryell Gelacki</h1>
-      <p class="cabecalho-sub-titulo">
+      <p class="cabecalho-sub-titulo" aria-label="Desenvolvedor Front End, Full Stack em Treinamento">
         Desenvolvedor Front End <br />(Full Stack em Treinamento)
       </p>
     </main>
@@ -53,7 +53,7 @@
     <section id="diferencial" class="diferencial">
       <h2 class="diferencial-titulo">O que me diferencia?</h2>
       <div class="diferencial-caixa">
-        <p class="diferencial-paragrafo">
+        <div class="diferencial-paragrafo">
           <ul>
             <li class="diferencial-lista">Foco no ROI: O meu trabalho é um investimento para o seu negócio.</li>
             <li class="diferencial-lista">Comunicação Transparente: Você sempre saberá onde estamos e para onde vamos.</li>
@@ -182,6 +182,41 @@
 
         window.open(url, "_blank");
       }
+
+      // Efeito de máquina de escrever
+      function efeitoMaquinaDeEscrever() {
+        const elemento = document.querySelector(".cabecalho-sub-titulo");
+        const textos = ["Desenvolvedor Front End", "(Full Stack em Treinamento)"];
+        let textoIndex = 0;
+        let charIndex = 0;
+        
+        // Limpa o conteúdo e adiciona o cursor
+        elemento.innerHTML = '<span class="cursor"></span>';
+        const cursor = elemento.querySelector('.cursor');
+
+        function digitar() {
+          if (textoIndex < textos.length) {
+            const textoAtual = textos[textoIndex];
+            if (charIndex < textoAtual.length) {
+              // Insere o caractere antes do cursor
+              cursor.insertAdjacentText('beforebegin', textoAtual.charAt(charIndex));
+              charIndex++;
+              setTimeout(digitar, 100); // Velocidade da digitação
+            } else {
+              textoIndex++;
+              charIndex = 0;
+              if (textoIndex < textos.length) {
+                cursor.insertAdjacentHTML('beforebegin', '<br>');
+              }
+              setTimeout(digitar, 500); // Pausa entre as linhas
+            }
+          }
+        }
+        
+        document.addEventListener("DOMContentLoaded", digitar);
+      }
+
+      efeitoMaquinaDeEscrever();
     </script>     
   
   </body>
