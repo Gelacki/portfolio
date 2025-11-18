@@ -136,6 +136,38 @@ h1 {
 .sobre-paragrafo {
   text-align: center;
   font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.diferencial {
+  padding: 6rem 2rem;
+}
+
+.diferencial-titulo {
+  font-size: 3rem;
+  color: var(--cor-claro);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.diferencial-caixa {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 1px solid var(--cor-vidro);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.diferencial-paragrafo {
+  text-align: center;
+  font-size: 5rem;
+}
+
+.diferencial-lista {
+  line-height: 3rem;
 }
 
 .projetos {
@@ -185,6 +217,7 @@ h1 {
 .paragafo-projetos {
   color: rgba(226, 232, 240, 0.8);
   line-height: 1.25rem;
+  line-height: 1.6;
 }
 
 .info-projetos {
