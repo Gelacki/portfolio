@@ -173,11 +173,11 @@ h1 {
 }
 
 .diferencial-paragrafo {
-  line-height: 1.6;
+  line-height: 1;
 }
 
 .diferencial-lista {
-  line-height: 3rem;
+  line-height: 1.5rem;
 }
 
 .projetos {
@@ -460,10 +460,6 @@ footer {
   .sobre-caixa,
   .diferencial-caixa {
     padding: 1.5rem;
-  }
-
-  .diferencial-paragrafo {
-    font-size: 2.5rem;
   }
 
   .projetos-caixa {
