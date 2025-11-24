@@ -220,6 +220,15 @@ h1 {
   object-fit: cover;
 }
 
+.lista {
+  gap: 2px;
+}
+
+.titulo-lista {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .caixa-textos-projetos {
   padding: 1.5rem;
 }
