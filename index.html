@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <!-- Configurações básicas do documento -->
     <meta charset="UTF-8" />
-    <!-- Meta tags essenciais para SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Portfólio | Aryell Gelacki</title>
+    <link rel="shortcut icon" href="img/Favico.png" type="image/x-icon">
+
+    <!-- Meta tags para SEO (Otimização para Mecanismos de Busca) -->
     <meta name="description" content="Portfólio de Aryell Gelacki, desenvolvedor front-end e full stack em treinamento, apaixonado por tecnologia e inovação." />
     <meta name="keywords" content="Desenvolvedor, Front End, Full Stack, Portfólio, Aryell Gelacki, Tecnologia, Programação" />
 
-    <!-- Open Graph / Facebook / WhatsApp -->
+    <!-- Meta tags para compartilhamento em redes sociais (Open Graph) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://seusite.com.br/" />
     <meta property="og:title" content="Portfólio | Aryell Gelacki" />
     <meta property="og:description" content="Desenvolvedor Front End (Full Stack em Treinamento) transformando desafios em soluções digitais." />
     <meta property="og:image" content="img/perfil01.png" />
 
-    <!-- Twitter -->
+    <!-- Meta tags para compartilhamento no Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://seusite.com.br/" />
     <meta property="twitter:title" content="Portfólio | Aryell Gelacki" />
     <meta property="twitter:description" content="Desenvolvedor Front End (Full Stack em Treinamento) transformando desafios em soluções digitais." />
     <meta property="twitter:image" content="img/perfil01.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio | Aryell Gelacki</title>
-    <link rel="shortcut icon" href="img/Favico.png" type="image/x-icon">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Link para a folha de estilos CSS -->
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
+    <!-- Elemento para o fundo animado de partículas -->
     <div class="particulas"></div>
 
+    <!-- Navegação principal do site, fixa no topo -->
     <nav class="navegacao">
       <ul class="menu">
         <li>
@@ -34,6 +43,9 @@
         </li>
         <li>
           <a href="#sobre" class="menu-link">Sobre</a>
+        </li>
+        <li>
+          <a href="#habilidades" class="menu-link">Habilidades</a>
         </li>
          <li>
           <a href="#diferencial" class="menu-link">Diferencial</a>
@@ -47,6 +59,7 @@
       </ul>
     </nav>
 
+    <!-- Seção de Início (Hero Section) -->
     <main id="inicio" class="cabecalho">
       <img src="img/perfil01.png" alt="foto de perfil" class="foto-perfil" />
       <h1>Aryell Gelacki</h1>
@@ -55,7 +68,8 @@
       </p>
     </main>
 
-    <section id="sobre" class="sobre">
+    <!-- Seção Sobre Mim -->
+    <section id="sobre" class="sobre" data-aos="fade-right" data-aos-delay="400" data-aos-duration="2000">
       <h2 class="sobre-titulo">Sobre Mim</h2>
       <div class="sobre-caixa">
         <p class="sobre-paragrafo">
@@ -68,7 +82,47 @@
       </div>
     </section>
 
-    <section id="diferencial" class="diferencial">
+    <!-- Seção de Habilidades -->
+    <section id="habilidades" class="habilidades" data-aos="fade-left" data-aos-delay="400" data-aos-duration="2000">
+      <h2 class="habilidades-titulo">Habilidades</h2>
+      <div class="habilidades-caixa">
+        <div class="habilidade-item">
+          <img src="img/icons/html5.png" alt="HTML5" class="habilidade-icone" />
+          <p>HTML5</p>
+        </div>
+        <div class="habilidade-item">
+          <img src="img/icons/css3.png" alt="CSS3" class="habilidade-icone" />
+          <p>CSS3</p>
+        </div>
+        <div class="habilidade-item">
+          <img src="img/icons/javascript.png" alt="JavaScript" class="habilidade-icone" />
+          <p>JavaScript</p>
+        </div>
+        <div class="habilidade-item">
+          <img src="img/icons/sass.png" alt="SASS" class="habilidade-icone" />
+          <p>SASS</p>
+        </div>
+        <div class="habilidade-item">
+          <img src="img/icons/react.png" alt="React" class="habilidade-icone" />
+          <p>React</p>
+        </div>
+        <div class="habilidade-item">
+          <img src="img/icons/nodejs.png" alt="NodeJS" class="habilidade-icone" />
+          <p>NodeJS</p>
+        </div>
+        <div class="habilidade-item">
+          <img src="img/icons/git.png" alt="Git" class="habilidade-icone" />
+          <p>Git</p>
+        </div>
+        <div class="habilidade-item">
+          <img src="img/icons/github.png" alt="GitHub" class="habilidade-icone" />
+          <p>GitHub</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Diferenciais -->
+    <section id="diferencial" class="diferencial" data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000">
       <h2 class="diferencial-titulo">O que me diferencia?</h2>
       <div class="diferencial-caixa">
         <div class="diferencial-paragrafo">
@@ -81,90 +135,79 @@
       </div>
     </section>
 
+    <!-- Seção de Projetos -->
     <section id="projetos" class="projetos">
-      <h2 class="projetos-titulo">Meus Projetos</h2>
+      <h2 class="projetos-titulo" data-aos="fade-down" data-aos-delay="400" data-aos-duration="2000">Meus Projetos</h2>
       <div class="projetos-caixa">
-        <div class="projetos-card">
-          <img src="img/img1.png" alt="Projeto 1" class="projetos-imagem" />
-          <div class="caixa-textos-projetos">
-            <h3 class="info-projetos">Placar Digital Kumite e Gestão de Lutas</h3>
-            <p class="paragrafo-projetos">
-              Uma aplicação web interativa desenvolvida para auxiliar árbitros e instrutores de Karatê. O projeto combina um scoreboard funcional (seguindo as regras de pontuação de Kumite).
-
-<div class="titulo-lista"><strong>Principais Funcionalidades:</strong></div>
-<ul>
- <li class="lista">Placar em Tempo Real: Controle total de pontos (Yuko, Waza-ari, Ippon), penalidades (C1, C2, C3, Hansoku Chui e Hansoku) e cronômetro de luta manipulados via JavaScript.</li>
-  <li class="lista">Edição Integrado: Nome de Atleta, Categoria.</li>
-  <li class="lista">Interface Intuitiva: Design limpo feito com CSS puro, garantindo leitura rápida durante a dinâmica ágil de uma luta.</li>
-</ul>
-            </p>
-          </div>
-        </div>
-
-        <div class="projetos-card">
-          
-          <a href="https://gelacki.github.io/imersao-dev/" target="_blank" rel="noopener noreferrer">
-            <img src="img/img2.png" alt="Projeto 2" class="projetos-imagem" />
+        <div class="projetos-caixa" data-aos="fade-right" data-aos-delay="400" data-aos-duration="2000">
+          <a href="https://github.com/seu-usuario/placar-kumite" target="_blank" rel="noopener noreferrer" class="projetos-card">
+            <img src="img/img1.png" alt="Projeto Placar de Kumite" class="projetos-imagem" />
+            <div class="caixa-textos-projetos">
+              <h3 class="info-projetos">Placar Digital Kumite e Gestão de Lutas</h3>
+              <p class="paragrafo-projetos">
+                Uma aplicação web interativa desenvolvida para auxiliar árbitros e instrutores de Karatê. O projeto combina um scoreboard funcional (seguindo as regras de pontuação de Kumite).
+              </p>
+              <div class="titulo-lista"><strong>Principais Funcionalidades:</strong></div>
+              <ul>
+                <li class="lista">Placar em Tempo Real: Controle total de pontos (Yuko, Waza-ari, Ippon), penalidades (C1, C2, C3, Hansoku Chui e Hansoku) e cronômetro de luta manipulados via JavaScript.</li>
+                <li class="lista">Edição Integrado: Nome de Atleta, Categoria.</li>
+                <li class="lista">Interface Intuitiva: Design limpo feito com CSS puro, garantindo leitura rápida durante a dinâmica ágil de uma luta.</li>
+              </ul>
+            </div>
           </a>
-          <div class="caixa-textos-projetos">
-            <h3 class="info-projetos">BookFinder</h3>
-            <p class="paragrafo-projetos">
-              Desenvolvimento de uma interface web intuitiva dedicada à consulta de acervo bibliográfico. O projeto conecta leitores aos seus livros favoritos através de uma experiência de busca simplificada e um sistema de agendamento direto.
-
-  <div class="titulo-lista"><strong>Principais Recursos:</strong></div>  
-  
-  <ul>
-    <li class="lista">Busca Dinâmica: Campo de pesquisa interativo que filtra livros por título, autor ou gênero em tempo real utilizando JavaScript.</li>
-    <li class="lista">Agendamento de Retirada: Formulário integrado para selecionar data e hora para visita ou retirada do exemplar.</li>
-    <li class="lista">Integração Mobile: O sistema gera automaticamente uma mensagem personalizada com o livro escolhido e o horário agendado, enviando os dados via API do WhatsApp.</li>
-    <li class="lista">Design Responsivo: Estilização com CSS3 moderno (Flexbox e Grid), garantindo legibilidade e navegação fluida em smartphones e desktops.</li>
-  </ul>
-
-            </p>
-          </div>
         </div>
 
-        <div class="projetos-card">
-          <a href="https://gelacki.github.io/barber-site/" target="_blank" rel="noopener noreferrer" title="Landing Page Barbearia Premium"><img src="img/img3.png" alt="Projeto 3" class="projetos-imagem" /></a>
-          <div class="caixa-textos-projetos">
-            <h3 class="info-projetos">Landing Page Barbearia Premium - Agendamento Inteligente</h3>
-            <p class="paragrafo-projetos">
-              Desenvolvimento de uma interface web moderna e responsiva para uma barbearia, 
-              focada na conversão de clientes e facilidade de uso. 
-              O projeto substitui agendamentos manuais por um fluxo digital intuitivo.
+        <div class="projetos-caixa" data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000">
+          <a href="https://gelacki.github.io/imersao-dev/" target="_blank" rel="noopener noreferrer" class="projetos-card">
+            <div>
+              <img src="img/img2.png" alt="Projeto 2" class="projetos-imagem" />
+              <div class="caixa-textos-projetos">
+                <h3 class="info-projetos">BookFinder</h3>
+                <p class="paragrafo-projetos">
+                  Desenvolvimento de uma interface web intuitiva dedicada à consulta de acervo bibliográfico. O projeto conecta leitores aos seus livros favoritos através de uma experiência de busca simplificada e um sistema de agendamento direto.
+                </p>
+                <div class="titulo-lista"><strong>Principais Recursos:</strong></div>
+                <ul>
+                  <li class="lista">Busca Dinâmica: Campo de pesquisa interativo que filtra livros por título, autor ou gênero em tempo real utilizando JavaScript.</li>
+                  <li class="lista">Agendamento de Retirada: Formulário integrado para selecionar data e hora para visita ou retirada do exemplar.</li>
+                  <li class="lista">Integração Mobile: O sistema gera automaticamente uma mensagem personalizada com o livro escolhido e o horário agendado, enviando os dados via API do WhatsApp.</li>
+                  <li class="lista">Design Responsivo: Estilização com CSS3 moderno (Flexbox e Grid), garantindo legibilidade e navegação fluida em smartphones e desktops.</li>
+                </ul>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="projetos-caixa" data-aos="fade-left" data-aos-delay="400" data-aos-duration="2000">
+          <a href="https://gelacki.github.io/barber-site/" target="_blank" rel="noopener noreferrer" class="projetos-card">
+            <img src="img/img3.png" alt="Projeto Landing Page Barbearia" class="projetos-imagem" />
+            <div class="caixa-textos-projetos">
+              <h3 class="info-projetos">Landing Page Barbearia Premium - Agendamento Inteligente</h3>
+              <p class="paragrafo-projetos">
+                Desenvolvimento de uma interface web moderna e responsiva para uma barbearia, focada na conversão de clientes e facilidade de uso. O projeto substitui agendamentos manuais por um fluxo digital intuitivo.
+              </p>
               <div class="titulo-lista"><strong>Destaques do Projeto:</strong></div>
               <ul>
-                <li class="lista">
-                  Design Responsivo: Layout adaptável para mobile e desktop,
-                  garantindo acessibilidade em qualquer dispositivo.
-                </li>
-                <li class="lista">
-                  Sistema de Agendamento: Interface interativa desenvolvida em JavaScript que permite ao usuário selecionar serviço,
-                  barbeiro e horário.
-                </li>
-                <li class="lista">
-                  Integração WhatsApp: Botão flutuante e CTA (Call to Action)
-                  que redirecionam os dados do agendamento pré-formatados diretamente para o WhatsApp do estabelecimento.
-                </li>
-                <li class="lista">
-                  Estilização Avançada: Uso de SASS (SCSS) para arquitetura de CSS modular,
-                  utilizando variáveis e mixins para fácil manutenção e consistência visual.
-                </li>
+                <li class="lista">Design Responsivo: Layout adaptável para mobile e desktop, garantindo acessibilidade em qualquer dispositivo.</li>
+                <li class="lista">Sistema de Agendamento: Interface interativa desenvolvida em JavaScript que permite ao usuário selecionar serviço, barbeiro e horário.</li>
+                <li class="lista">Integração WhatsApp: Botão flutuante e CTA (Call to Action) que redirecionam os dados do agendamento pré-formatados diretamente para o WhatsApp do estabelecimento.</li>
+                <li class="lista">Estilização Avançada: Uso de SASS (SCSS) para arquitetura de CSS modular, utilizando variáveis e mixins para fácil manutenção e consistência visual.</li>
               </ul>
-            </p>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="contatos" class="contatos">
+    <!-- Seção de Contato -->
+    <section id="contatos" class="contatos" >
       <h2 class="contatos-titulo">Entre em Contato</h2>
 
       <form
         class="formulario-contato"
         id="formulario"
         onsubmit="enviarWhats(event)"
-      >
+      data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1500">
         <div class="grupo-form">
           <input type="text" name="nome" placeholder="Nome" class="campo-form" id="nome" required />
         </div>
@@ -182,6 +225,7 @@
         <button type="submit" class="botao-form">Enviar WhatsApp</button>
       </form>
 
+      <!-- Rodapé com informações de contato e links sociais -->
       <footer id="contato">
       <div class="footer-content">
         <div class="contact-info">
@@ -226,56 +270,9 @@
       </div>
     </footer>
 
-    <script>
-      function enviarWhats(event) {
-        event.preventDefault();
-        const nome = document.getElementById("nome").value.trim();
-        const mensagem = document.getElementById("mensagem").value.trim();
-        const telefone = "5542998571023"; // Substitua pelo seu número de telefone com o código do país
-
-        const texto = `Olá! Me chamo ${nome || 'Contato'}. ${mensagem || ''}`;
-        const msgFormatada = encodeURIComponent(texto);
-
-        const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
-
-        window.open(url, "_blank");
-      }
-
-      // Efeito de máquina de escrever
-      function efeitoMaquinaDeEscrever() {
-        const elemento = document.querySelector(".cabecalho-sub-titulo");
-        const textos = ["Desenvolvedor Front End", "(Full Stack em Treinamento)"];
-        let textoIndex = 0;
-        let charIndex = 0;
-        
-        // Limpa o conteúdo e adiciona o cursor
-        elemento.innerHTML = '<span class="cursor"></span>';
-        const cursor = elemento.querySelector('.cursor');
-
-        function digitar() {
-          if (textoIndex < textos.length) {
-            const textoAtual = textos[textoIndex];
-            if (charIndex < textoAtual.length) {
-              // Insere o caractere antes do cursor
-              cursor.insertAdjacentText('beforebegin', textoAtual.charAt(charIndex));
-              charIndex++;
-              setTimeout(digitar, 100); // Velocidade da digitação
-            } else {
-              textoIndex++;
-              charIndex = 0;
-              if (textoIndex < textos.length) {
-                cursor.insertAdjacentHTML('beforebegin', '<br>');
-              }
-              setTimeout(digitar, 500); // Pausa entre as linhas
-            }
-          }
-        }
-        
-        document.addEventListener("DOMContentLoaded", digitar);
-      }
-
-      efeitoMaquinaDeEscrever();
-    </script>     
+    <!-- Início do Bloco de Scripts JavaScript -->
+    <script src="script.js"> 
+    </script>
   
   </body>
 </html>
