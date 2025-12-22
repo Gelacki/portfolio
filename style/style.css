@@ -14,6 +14,7 @@ html {
 }
 
 /* ===== VARIÁVEIS DE COR (PALETA DO SITE) ===== */
+/* O uso de variáveis facilita a troca de temas e manutenção das cores em todo o projeto */
 :root {
   --cor-primaria: #3a7ca5; /* Azul Marinho */
   --cor-secundaria: #00e5ff; /* Azul Neon */
@@ -31,6 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ===== ESTILOS DA BARRA DE NAVEGAÇÃO ===== */
@@ -46,8 +48,9 @@ body {
 .menu {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style: none;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 
 /* Estilos dos links do menu */
@@ -81,12 +84,13 @@ body {
 
 /* ===== ESTILOS DA SEÇÃO DE CABEÇALHO (INÍCIO) ===== */
 .cabecalho {
-  padding-top: 10rem;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 0;
+  height: 100vh;
+  display: flex; /* Define um container flexível */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
   flex-direction: column;
+  text-align: center;
 }
 
 /* Foto de perfil com animação e brilho */
@@ -137,7 +141,7 @@ h1 {
   font-size: 3rem;
   color: var(--cor-claro);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 3rem;
 }
 
 /* Caixa com efeito de vidro para o conteúdo */
@@ -147,8 +151,10 @@ h1 {
   margin: 0 auto;
   border-radius: 16px;
   border: 1px solid var(--cor-vidro);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidade com Safari */
+  backdrop-filter: blur(
+    10px
+  ); /* Aplica o desfoque no fundo (Efeito Glassmorphism) */
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -167,7 +173,7 @@ h1 {
   font-size: 3rem;
   color: var(--cor-claro);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 3rem;
 }
 
 .diferencial-caixa {
@@ -187,6 +193,7 @@ h1 {
 
 .diferencial-lista {
   line-height: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* ===== ESTILOS DA SEÇÃO HABILIDADES ===== */
@@ -198,7 +205,7 @@ h1 {
   font-size: 3rem;
   color: var(--cor-claro);
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
 }
 
 /* Container para os cards de habilidade */
@@ -207,7 +214,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 2rem;
   border-radius: 16px;
@@ -250,6 +257,7 @@ h1 {
 /* Grid para organizar os cards de projeto */
 .projetos-caixa {
   display: grid;
+  /* Cria colunas automáticas que se ajustam à tela, com largura mínima de 300px */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   max-width: 1200px;
@@ -274,8 +282,8 @@ h1 {
 
 .projetos-titulo {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 50px;
+  font-size: 3rem;
+  margin-bottom: 3rem;
 }
 
 /* Efeito de sombra e escala ao passar o mouse */
@@ -291,7 +299,7 @@ h1 {
 }
 
 .lista {
-  gap: 2px;
+  margin-bottom: 0.5rem;
 }
 
 .titulo-lista {
@@ -304,9 +312,8 @@ h1 {
   padding: 1.5rem;
 }
 
-.paragafo-projetos {
+.paragrafo-projetos {
   color: rgba(226, 232, 240, 0.8);
-  line-height: 1.25rem;
   line-height: 1.6;
 }
 
@@ -316,13 +323,13 @@ h1 {
 
 /* ===== ESTILOS DA SEÇÃO CONTATOS ===== */
 .contatos {
-  margin-top: 5rem;
+  padding: 6rem 2rem;
 }
 
 .contatos-titulo {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 50px;
+  font-size: 3rem;
+  margin-bottom: 3rem;
 }
 
 /* Formulário de contato com efeito de vidro */

@@ -4,6 +4,7 @@
     <!-- Configurações básicas do documento -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Biblioteca AOS (Animate On Scroll) para animações de entrada ao rolar a página -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Portfólio | Aryell Gelacki</title>
     <link rel="shortcut icon" href="img/Favico.png" type="image/x-icon">
@@ -83,7 +84,7 @@
     </section>
 
     <!-- Seção de Habilidades -->
-    <section id="habilidades" class="habilidades" data-aos="fade-left" data-aos-delay="450" data-aos-duration="2500">
+    <section id="habilidades" class="habilidades" data-aos="zoom-in" data-aos-delay="450" data-aos-duration="2500">
       <h2 class="habilidades-titulo">Habilidades</h2>
       <div class="habilidades-caixa">
         <div class="habilidade-item">
@@ -131,7 +132,6 @@
             <li class="diferencial-lista">Comunicação Transparente: Você sempre saberá onde estamos e para onde vamos.</li>
             <li class="diferencial-lista">Focado em: Adaptação ágil, Paixão por Inovação, Obsessão por Detalhes</li>
           </ul>
-        </p>
       </div>
     </section>
 
@@ -139,7 +139,7 @@
     <section id="projetos" class="projetos">
       <h2 class="projetos-titulo" data-aos="fade-down" data-aos-delay="450" data-aos-duration="2500">Meus Projetos</h2>
       <div class="projetos-caixa">
-        <div class="projetos-caixa" data-aos="fade-right" data-aos-delay="450" data-aos-duration="2500">
+        <div data-aos="fade-right" data-aos-delay="450" data-aos-duration="2500">
           <a href="https://github.com/seu-usuario/placar-kumite" target="_blank" rel="noopener noreferrer" class="projetos-card">
             <img src="img/img1.png" alt="Projeto Placar de Kumite" class="projetos-imagem" />
             <div class="caixa-textos-projetos">
@@ -149,17 +149,16 @@
               </p>
               <div class="titulo-lista"><strong>Principais Funcionalidades:</strong></div>
               <ul>
-                <li class="lista">Placar em Tempo Real: Controle total de pontos (Yuko, Waza-ari, Ippon), penalidades (C1, C2, C3, Hansoku Chui e Hansoku) e cronômetro de luta manipulados via JavaScript.</li>
-                <li class="lista">Edição Integrado: Nome de Atleta, Categoria.</li>
-                <li class="lista">Interface Intuitiva: Design limpo feito com CSS puro, garantindo leitura rápida durante a dinâmica ágil de uma luta.</li>
+                <li class="lista">Placar em Tempo Real: Controle total de pontos, penalidades e cronômetro via JavaScript.</li>
+                <li class="lista">Edição Integrada: Gerenciamento de nomes de atletas e categorias.</li>
+                <li class="lista">Interface Intuitiva: Design limpo em CSS puro para leitura rápida.</li>
               </ul>
             </div>
           </a>
         </div>
 
-        <div class="projetos-caixa" data-aos="fade-up" data-aos-delay="450" data-aos-duration="2500">
+        <div data-aos="fade-up" data-aos-delay="450" data-aos-duration="2500">
           <a href="https://gelacki.github.io/imersao-dev/" target="_blank" rel="noopener noreferrer" class="projetos-card">
-            <div>
               <img src="img/img2.png" alt="Projeto 2" class="projetos-imagem" />
               <div class="caixa-textos-projetos">
                 <h3 class="info-projetos">BookFinder</h3>
@@ -168,17 +167,16 @@
                 </p>
                 <div class="titulo-lista"><strong>Principais Recursos:</strong></div>
                 <ul>
-                  <li class="lista">Busca Dinâmica: Campo de pesquisa interativo que filtra livros por título, autor ou gênero em tempo real utilizando JavaScript.</li>
-                  <li class="lista">Agendamento de Retirada: Formulário integrado para selecionar data e hora para visita ou retirada do exemplar.</li>
-                  <li class="lista">Integração Mobile: O sistema gera automaticamente uma mensagem personalizada com o livro escolhido e o horário agendado, enviando os dados via API do WhatsApp.</li>
-                  <li class="lista">Design Responsivo: Estilização com CSS3 moderno (Flexbox e Grid), garantindo legibilidade e navegação fluida em smartphones e desktops.</li>
+                  <li class="lista">Busca Dinâmica: Filtragem em tempo real por título, autor ou gênero via JavaScript.</li>
+                  <li class="lista">Agendamento: Seleção de data e hora para retirada.</li>
+                  <li class="lista">Integração Mobile: Envio automático de dados do agendamento via WhatsApp.</li>
+                  <li class="lista">Design Responsivo: Layout fluido para mobile e desktop com CSS3 (Flexbox/Grid).</li>
                 </ul>
               </div>
-            </div>
           </a>
         </div>
 
-        <div class="projetos-caixa" data-aos="fade-left" data-aos-delay="450" data-aos-duration="2500">
+        <div data-aos="fade-left" data-aos-delay="450" data-aos-duration="2500">
           <a href="https://gelacki.github.io/barber-site/" target="_blank" rel="noopener noreferrer" class="projetos-card">
             <img src="img/img3.png" alt="Projeto Landing Page Barbearia" class="projetos-imagem" />
             <div class="caixa-textos-projetos">
@@ -188,10 +186,10 @@
               </p>
               <div class="titulo-lista"><strong>Destaques do Projeto:</strong></div>
               <ul>
-                <li class="lista">Design Responsivo: Layout adaptável para mobile e desktop, garantindo acessibilidade em qualquer dispositivo.</li>
-                <li class="lista">Sistema de Agendamento: Interface interativa desenvolvida em JavaScript que permite ao usuário selecionar serviço, barbeiro e horário.</li>
-                <li class="lista">Integração WhatsApp: Botão flutuante e CTA (Call to Action) que redirecionam os dados do agendamento pré-formatados diretamente para o WhatsApp do estabelecimento.</li>
-                <li class="lista">Estilização Avançada: Uso de SASS (SCSS) para arquitetura de CSS modular, utilizando variáveis e mixins para fácil manutenção e consistência visual.</li>
+                <li class="lista">Design Responsivo: Layout adaptável para qualquer dispositivo.</li>
+                <li class="lista">Agendamento Inteligente: Seleção interativa de serviço, barbeiro e horário via JavaScript.</li>
+                <li class="lista">Integração WhatsApp: Redirecionamento automático de dados de agendamento.</li>
+                <li class="lista">Estilização Modular: Arquitetura SASS (SCSS) para manutenção e consistência visual.</li>
               </ul>
             </div>
           </a>
