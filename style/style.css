@@ -266,6 +266,7 @@ h1 {
 
 /* Card individual de cada projeto */
 .projetos-card {
+  display: block;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   -webkit-backdrop-filter: blur(10px);
@@ -293,6 +294,7 @@ h1 {
 }
 
 .projetos-imagem {
+  display: block;
   height: 200px;
   width: 100%;
   object-fit: cover;
