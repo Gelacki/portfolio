@@ -16,13 +16,13 @@ html {
 /* ===== VARIÁVEIS DE COR (PALETA DO SITE) ===== */
 /* O uso de variáveis facilita a troca de temas e manutenção das cores em todo o projeto */
 :root {
-  --cor-primaria: #3a7ca5; /* Azul Marinho */
-  --cor-secundaria: #00e5ff; /* Azul Neon */
-  --cor-escuro: #0a192f; /* Azul Marinho Escuro (quase preto) */
-  --cor-maisEscuro: #020c1b; /* Preto azulado */
+  --cor-primaria: #3c096c; /* Roxo Escuro (Dark Purple) */
+  --cor-secundaria: #9d4edd; /* Lilás Neon (Light Purple) */
+  --cor-escuro: #10002b; /* Roxo Profundo (Fundo) */
+  --cor-maisEscuro: #05000a; /* Quase Preto */
   --cor-claro: #e0e1dd;
-  --cor-azul-agua: #00e5ff; /* Azul Neon */
-  --cor-vidro: rgba(0, 229, 255, 0.1); /* Vidro com tom de Azul Neon */
+  --cor-azul-agua: #9d4edd; /* Lilás Neon */
+  --cor-vidro: rgba(157, 78, 221, 0.1); /* Vidro Lilás */
 }
 
 /* ===== ESTILOS GERAIS DO CORPO DA PÁGINA ===== */
@@ -39,7 +39,7 @@ body {
 .navegacao {
   position: fixed;
   top: 0;
-  background: rgba(10, 25, 47, 0.8); /* Fundo semitransparente */
+  background: rgba(16, 0, 43, 0.8); /* Fundo semitransparente roxo */
   width: 100%;
   z-index: 100;
   padding: 1.5rem;
@@ -301,7 +301,7 @@ h1 {
 
 /* Efeito de sombra e escala ao passar o mouse */
 .projetos-card:hover {
-  box-shadow: 0 10px 20px rgba(0, 229, 255, 0.2);
+  box-shadow: 0 10px 20px rgba(157, 78, 221, 0.2);
   transform: translateY(-10px) scale(1.03);
 }
 
@@ -372,7 +372,7 @@ h1 {
 /* Efeito de foco nos campos do formulário */
 .campo-form:focus {
   border-color: var(--cor-secundaria);
-  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+  box-shadow: 0 0 10px rgba(157, 78, 221, 0.3);
 }
 
 .grupo-form {
@@ -398,7 +398,7 @@ h1 {
 
 .botao-form:hover {
   transform: translateY(-4px);
-  box-shadow: 0 5px 15px rgba(0, 229, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(157, 78, 221, 0.3);
 }
 
 /* ===== EFEITO DE FUNDO (PARTÍCULAS) ===== */
@@ -421,12 +421,14 @@ h1 {
 }
 
 /* ===== ESTILOS DO RODAPÉ ===== */
-footer {
-  margin-top: 5rem;
+.rodape {
+  display: block;
+  width: 100%;
+  margin: 3em 0 0 0;
   background-color: var(--cor-vidro);
   text-align: center;
-  font-size: 0.8em;
-  padding: 5px;
+  justify-content: center;
+  font-size: 1em;
 }
 
 /* Conteúdo principal do rodapé */
