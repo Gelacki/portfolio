@@ -117,19 +117,31 @@ h1 {
 .cabecalho-sub-titulo {
   font-size: 1.5rem;
   color: var(--cor-claro);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw; /* Garante que não estoure em telas pequenas */
+  margin: 0 auto; /* Centraliza o bloco na tela */
 }
 
-/* Cursor piscante para o efeito de máquina de escrever */
-.cabecalho-sub-titulo .cursor {
-  display: inline-block;
-  width: 2px;
-  height: 1.5rem; /* Ajuste a altura conforme o tamanho da fonte */
-  background-color: var(--cor-secundaria);
-  animation: piscar 0.7s infinite;
-  margin-left: 4px;
-  position: relative;
-  top: 4px;
+.cabecalho-sub-titulo span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid transparent;
+  width: 0;
+}
+
+.texto-1 {
+  animation:
+    digitar 2s steps(23) forwards,
+    piscar 0.5s step-end 4;
+}
+
+.texto-2 {
+  animation:
+    digitar 2.5s steps(27) 2s forwards,
+    piscar 0.75s step-end 2s infinite;
 }
 
 /* ===== ESTILOS DA SEÇÃO SOBRE MIM ===== */
@@ -398,11 +410,8 @@ h1 {
   height: 100%;
   z-index: -1;
   opacity: 0.5;
-  background: radial-gradient(
-      circle at 10% 20%,
-      var(--cor-primaria) 0%,
-      transparent 20%
-    ),
+  background:
+    radial-gradient(circle at 10% 20%, var(--cor-primaria) 0%, transparent 20%),
     radial-gradient(
       circle at 90% 80%,
       var(--cor-secundaria) 0%,
@@ -514,15 +523,22 @@ footer {
   }
 }
 
-/* Animação de piscar para o cursor */
+@keyframes digitar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 @keyframes piscar {
   0%,
   100% {
-    opacity: 1;
+    border-color: var(--cor-secundaria);
   }
-
   50% {
-    opacity: 0;
+    border-color: transparent;
   }
 }
 
@@ -537,7 +553,7 @@ footer {
     font-size: 1.2rem;
   }
 
-  .cabecalho-sub-titulo .cursor {
+  .cabecalho-sub-titulo {
     height: 1.2rem;
   }
 
@@ -587,7 +603,9 @@ footer {
 .fade-in-section {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
 }
 
 .fade-in-section.is-visible {
