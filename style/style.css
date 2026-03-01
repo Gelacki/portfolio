@@ -16,13 +16,13 @@ html {
 /* ===== VARIÁVEIS DE COR (PALETA DO SITE) ===== */
 /* O uso de variáveis facilita a troca de temas e manutenção das cores em todo o projeto */
 :root {
-  --cor-primaria: #3c096c; /* Roxo Escuro (Dark Purple) */
-  --cor-secundaria: #9d4edd; /* Lilás Neon (Light Purple) */
-  --cor-escuro: #10002b; /* Roxo Profundo (Fundo) */
-  --cor-maisEscuro: #05000a; /* Quase Preto */
-  --cor-claro: #e0e1dd;
-  --cor-azul-agua: #9d4edd; /* Lilás Neon */
-  --cor-vidro: rgba(157, 78, 221, 0.1); /* Vidro Lilás */
+  --cor-primaria: #14213d; /* Azul Noturno (Dark Navy) */
+  --cor-secundaria: #2c7da0; /* Azul Petróleo (Deep Blue) - Menos neon, mais sóbrio */
+  --cor-escuro: #020b14; /* Abissal (Quase Preto) */
+  --cor-maisEscuro: #000000; /* Preto Puro */
+  --cor-claro: #8d99ae; /* Cinza Azulado (Texto suavizado, não branco puro) */
+  --cor-azul-agua: #2c7da0; /* Acompanha a secundária */
+  --cor-vidro: rgba(44, 125, 160, 0.15); /* Vidro mais discreto */
 }
 
 /* ===== ESTILOS GERAIS DO CORPO DA PÁGINA ===== */
@@ -39,7 +39,7 @@ body {
 .navegacao {
   position: fixed;
   top: 0;
-  background: rgba(16, 0, 43, 0.8); /* Fundo semitransparente roxo */
+  background: var(--cor-vidro); /* Fundo semitransparente roxo */
   width: 100%;
   z-index: 100;
   padding: 1.5rem;
@@ -70,11 +70,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: linear-gradient(
-    90deg,
-    var(--cor-primaria),
-    var(--cor-secundaria)
-  );
+  background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
   transition: 0.5s ease;
 }
 
@@ -110,7 +106,7 @@ h1 {
   color: var(--cor-claro);
   text-shadow: 0 0 20px var(--cor-secundaria);
   font-weight: bold;
-  margin: 20px;
+  margin: 20px 0 10px 0;
 }
 
 /* Subtítulo com efeito de máquina de escrever */
@@ -164,9 +160,7 @@ h1 {
   border-radius: 16px;
   border: 1px solid var(--cor-vidro);
   -webkit-backdrop-filter: blur(10px); /* Compatibilidade com Safari */
-  backdrop-filter: blur(
-    10px
-  ); /* Aplica o desfoque no fundo (Efeito Glassmorphism) */
+  backdrop-filter: blur(10px); /* Aplica o desfoque no fundo (Efeito Glassmorphism) */
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -288,9 +282,7 @@ h1 {
   transition: all 0.5s ease;
   cursor: pointer;
   text-decoration: none;
-  color: var(
-    --cor-claro
-  ); /* Garante que o texto dentro do link não fique azul */
+  color: var(--cor-claro); /* Garante que o texto dentro do link não fique azul */
 }
 
 .projetos-titulo {
@@ -382,11 +374,7 @@ h1 {
 /* Botão de envio do formulário */
 .botao-form {
   color: var(--cor-claro);
-  background: linear-gradient(
-    45deg,
-    var(--cor-primaria),
-    var(--cor-secundaria)
-  );
+  background: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria));
   padding: 1rem 2rem;
   border: none;
   border-radius: 8px;
@@ -410,14 +398,7 @@ h1 {
   height: 100%;
   z-index: -1;
   opacity: 0.5;
-  background:
-    radial-gradient(circle at 10% 20%, var(--cor-primaria) 0%, transparent 20%),
-    radial-gradient(
-      circle at 90% 80%,
-      var(--cor-secundaria) 0%,
-      transparent 20%
-    ),
-    var(--cor-maisEscuro);
+  background: radial-gradient(circle at 10% 20%, var(--cor-primaria) 0%, transparent 20%), radial-gradient(circle at 90% 80%, var(--cor-secundaria) 0%, transparent 20%), var(--cor-maisEscuro);
 }
 
 /* ===== ESTILOS DO RODAPÉ ===== */
@@ -545,7 +526,24 @@ h1 {
 }
 
 /* ===== MEDIA QUERIES (RESPONSIVIDADE) ===== */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .navegacao {
+    padding: 15px;
+  }
+
+  .menu {
+    gap: 0.5rem;
+
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-link {
+    font-size: 0.9rem;
+  }
+
   h1 {
     font-size: 2.5rem;
     text-align: center;
@@ -553,16 +551,6 @@ h1 {
 
   .cabecalho-sub-titulo {
     font-size: 1.2rem;
-  }
-
-  .cabecalho-sub-titulo {
-    height: 1.2rem;
-  }
-
-  .menu {
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
   }
 
   .sobre,
